@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ekachai Wongsiri</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+      .color-blue {
+        color: #2f3192;
+      }
+      .color-black {
+        color: black;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+      }
+      .container > div {
+        display: flex;
+      }
+      .left {
+        width: 35%;
+        background-color: #efc514;
+        padding-top: 5rem;
+        background-image: url("/sl_031420_28950_04.png");
+        background-position: 0% 0%;
+        background-size: 256%;
+        background-repeat: no-repeat;
+        background-blend-mode: multiply;
+      }
+      .right {
+        width: 65%;
+        background-color: #e6e8ea;
+        padding-top: 2rem;
+      }
+      .header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .header img {
+        width: 200px;
+        height: 200px;
+        max-width: 250px;
+        max-height: 250px;
+        border-radius: 50%;
+        border: 5px solid #2f3192;
+      }
+      .header h1 {
+        font-size: 3rem;
+        color: #2f3192;
+        margin: 0;
+        margin-top: 1rem;
+      }
+      .no-margin-bottom {
+        margin-bottom: 0;
+      }
+      .header p {
+        margin-top: 0.2rem;
+      }
+      .position {
+        font-size: 2rem;
+      }
+      .section {
+        margin-bottom: 20px;
+      }
+      .section h2 {
+        padding: 5px 10px;
+        width: max-content;
+        color: #efc514;
+        margin-bottom: 10px;
+        background-color: rgb(33, 33, 33);
+        border-radius: 0 8px 0 0;
+      }
+      .section .content {
+        padding: 0.8px;
+        border-radius: 4px;
+        padding-left: 1rem;
+      }
+      .section .content p {
+        margin: 0;
+        margin-left: 1rem;
+      }
+
+      .skills {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      .skills .text {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3rem;
+      }
+      .skill {
+        position: relative;
+      }
+      .dot {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: #efc514;
+        top: 4px;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 3px solid #2f3192;
+        z-index: 10;
+        border-radius: 8px;
+        background: rgb(47, 49, 146);
+        background: linear-gradient(0deg, rgba(47, 49, 146, 1) 0%, rgba(239, 197, 20, 1) 47%, rgba(47, 49, 146, 1) 100%);
+      }
+      .bar,
+      .progress-bar {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 100%;
+        z-index: 4;
+        height: 5px;
+        background-color: gray;
+      }
+      .bar {
+        background-color: red;
+        width: 20%;
+        z-index: 5;
+      }
+      .skills .text span:nth-last-child(2) {
+        font-weight: 600;
+      }
+      .seperater {
+        padding-top: 2rem;
+        width: 80%;
+        margin: 2rem auto 0 auto;
+      }
+      #experience p {
+        margin-top: -1rem;
+      }
+      #certificate p {
+        margin-top: 0.5rem;
+      }
+      #contact p {
+        margin-bottom: 0.5rem;
+      }
+      #contact span {
+        padding-left: 0.5rem;
+      }
+      footer {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-bottom: 1rem;
+      }
+      footer i {
+        font-size: 3rem;
+        color: #2f3192;
+      }
+      footer span {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      #cognos {
+        width: 20%;
+        height: 50px;
+      }
+      #node {
+        width: 20%;
+        height: 90px;
+      }
+      #nice {
+        width: 20%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <div class="left">
+          <div class="top">
+            <div class="section">
+              <div class="header">
+                <img src="/IMG20240514190228-EDIT.jpg.jpg" alt="" />
+                <h1>Ekachai<br />Wongsiri</h1>
+                <p class="position">Head of RPA Developer</p>
+              </div>
+            </div>
+          </div>
+          <div class="bottom" style="padding-top: 2rem; padding-right: 1rem">
+            <div class="section">
+              <h2>Skills</h2>
+              <div class="content">
+                <div class="skills">
+                  <div class="text" style="margin-top: 1rem">
+                    <span>NICE RPA</span>
+                    <span class="percent"></span>
+                  </div>
+                  <div class="skill">
+                    <div class="dot"></div>
+                    <div class="bar" data="85"></div>
+                    <div class="progress-bar"></div>
+                  </div>
+                </div>
+                <div class="skills">
+                  <div class="text">
+                    <span>HTML</span>
+                    <span class="percent"></span>
+                  </div>
+                  <div class="skill">
+                    <div class="dot"></div>
+                    <div class="bar" data="85"></div>
+                    <div class="progress-bar"></div>
+                  </div>
+                </div>
+
+                <div class="skills">
+                  <div class="text">
+                    <span>IBM Cognos<br />(Data Visualation)</span>
+                    <span class="percent"></span>
+                  </div>
+                  <div class="skill">
+                    <div class="dot"></div>
+                    <div class="bar" data="85"></div>
+                    <div class="progress-bar"></div>
+                  </div>
+                </div>
+
+                <div class="skills">
+                  <div class="text">
+                    <span>JavaScript</span>
+                    <span class="percent"></span>
+                  </div>
+                  <div class="skill">
+                    <div class="dot"></div>
+                    <div class="bar" data="75"></div>
+                    <div class="progress-bar"></div>
+                  </div>
+                </div>
+                <div class="skills">
+                  <div class="text">
+                    <span>CSS</span>
+                    <span class="percent"></span>
+                  </div>
+                  <div class="skill">
+                    <div class="dot"></div>
+                    <div class="bar" data="70"></div>
+                    <div class="progress-bar"></div>
+                  </div>
+                </div>
+                <div class="skills">
+                  <div class="text">
+                    <span>NodeJS</span>
+                    <span class="percent"></span>
+                  </div>
+                  <div class="skill">
+                    <div class="dot"></div>
+                    <div class="bar" data="35"></div>
+                    <div class="progress-bar"></div>
+                  </div>
+                </div>
+                <div class="skills">
+                  <div class="text">
+                    <span>REACT</span>
+                    <span class="percent"></span>
+                  </div>
+                  <div class="skill">
+                    <div class="dot"></div>
+                    <div class="bar" data="35"></div>
+                    <div class="progress-bar"></div>
+                  </div>
+                </div>
+
+                <div class="skills">
+                  <div class="text">
+                    <span>Express</span>
+                    <span class="percent"></span>
+                  </div>
+                  <div class="skill">
+                    <div class="dot"></div>
+                    <div class="bar" data="35"></div>
+                    <div class="progress-bar"></div>
+                  </div>
+                </div>
+                <div class="seperater"></div>
+              </div>
+            </div>
+            <div class="section">
+              <h2>Contact Info</h2>
+              <div class="content" id="contact" style="padding-left: unset">
+                <p><b class="color-blue">Email:</b><br /><span>ekachaiwongsiri@gmail.com</span></p>
+                <p><b class="color-blue">Phone:</b><span>064-702-7000</span></p>
+                <p><b class="color-blue">Address:</b><br /><span>Siriplace Ratchaplug-345 No. 345/6 Moo.1 Bangkuwan, Mueng, Phatumtani, Thanland 12000</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div class="section">
+            <h2>Objective</h2>
+            <div class="content">
+              <p>I bring eight years of experience in the banking industry, specifically within contact centers and insurance. My expertise lies in discovering and developing existing processes, transforming them into efficient automation solutions—both attended and unattended. Additionally, I am proficient in JavaScript, enabling me to effectively control web applications. As the Head of the Real-Time Process Automation (RPA) Department, my objectives include project leadership, resource management, and process optimization.</p>
+            </div>
+          </div>
+          <div class="section">
+            <h2>Experience</h2>
+            <div class="content" id="experience">
+              <h4 class="color-blue">2016 - 2019</h4>
+              <p>NICE Real Time Process Automation Developer, Develop a process for renewing car insurance policies for companies TIC, SMK and SCB’s service center project.</p>
+              <h4 class="color-blue">2019 - 2021</h4>
+              <p>Head of Business Analysis, discover potential opportunities to convert processes into RPA solutions—both attended and unattended—alongside NICE’s global team of professional business analysts at SCB’s contact center.</p>
+              <h4 class="color-blue">2021 - 2024</h4>
+              <p>Head of RPA Developer, I effectively manage resources to develop new processes while simultaneously maintaining existing ones. My focus is on improving success rates to ensure our customers benefit from our products.</p>
+              <h4 class="color-blue">2022</h4>
+              <p>I became a Cognos developer to demonstrate the value of our processes to customers. They often request reports and dashboards tailored to their specific data needs, and my role involves visualizing this data effectively.</p>
+            </div>
+          </div>
+          <div class="section">
+            <h2>Education</h2>
+            <div class="content">
+              <p>High School Diploma - Mathayom 6 at the Non-Formal Education Center Bang Sao Thong District Samut Prakan Province (Year)</p>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2>Certificates</h2>
+            <div class="content" id="certificate">
+              <h4 class="no-margin-bottom color-blue">Title: NICE Advanced Automation Solutions R6.7 - R7.8</h4>
+              <p><b class="color-black">Certifying Organization:&nbsp;</b>NICE</p>
+              <p><b class="color-black">Year Earned:&nbsp;</b>2016 - 2023</p>
+              <p><b class="color-black">Summary:&nbsp;</b>NICE Certified Automation Associate certification covers basic development of projects. This certification is required to be a part of an Automation development team.</p>
+              <h4 class="no-margin-bottom color-blue">Title: AWS Certified Cloud Practitioner</h4>
+              <p><b class="color-black">Certifying Organization:&nbsp;</b>AWS</p>
+              <p><b class="color-black">Year Earned:&nbsp;</b>Oct 20, 2021</p>
+              <p><b class="color-black">Summary:&nbsp;</b>NICE Certified Automation Associate certification covers basic development of projects. This certification is required to be a part of an Automation development team.</p>
+            </div>
+          </div>
+          <div class="section">
+            <h2>Other Skills</h2>
+            <div class="content" id="other-skills">
+              <p>- Familiar with SQL for database management and querying.</p>
+              <p>- Basic understanding of PHP for web development.</p>
+              <p>- Basic network administration skills.</p>
+              <p>- Able to work with NICE Voice Recorder systems.</p>
+              <p>- Experience in on-site installations and maintenance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <span>
+          <i class="fa-brands fa-react"></i>
+          <i class="fa-brands fa-node-js"></i>
+          <i class="fa-brands fa-html5"></i>
+          <i class="fa-brands fa-js"></i>
+          <i class="fa-brands fa-css3-alt"></i>
+        </span>
+        <span>
+          <img id="nice" src="https://th.bing.com/th/id/OIP.iavXx2kQdhXTUKZedDS-NgAAAA?rs=1&pid=ImgDetMain" alt="" />
+          <img id="cognos" src="https://data.wustl.edu/files/2021/06/Logo_cognos_analytics_crop.png" alt="" />
+          <img id="node" src="https://th.bing.com/th/id/OIP.t9gNdG9q0CwxYEMUoql6CQHaEK?rs=1&pid=ImgDetMain" alt="" />
+        </span>
+      </footer>
+    </div>
+    <script>
+      let bars = document.querySelectorAll(".bar")
+      bars.forEach((bar) => {
+        bar.style.width = `${bar.getAttribute("data") + "%"}`
+      })
+      let dots = document.querySelectorAll(".dot")
+      dots.forEach((dot) => {
+        let data = dot.parentElement.querySelector(".bar").getAttribute("data") + "%"
+        // dot.parentNode.parentNode.querySelector(".text .percent").innerText = `${data}`
+        dot.parentNode.parentNode.querySelector(".text .percent").innerText = ``
+        dot.style.left = `${data}`
+      })
+    </script>
+  </body>
+</html>
